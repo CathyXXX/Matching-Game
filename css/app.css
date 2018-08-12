@@ -1,0 +1,233 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background: #ffffff url('../img/pattern.jpg'); 
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+header {
+    background: #ffff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    width: 100%
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #ffc580 0%, #cd7e7e 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.card:hover {
+    opacity: 0.9;
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #f36f6fb3;
+    cursor: default;
+    animation: flip 0.4s;
+}
+
+@keyframes flip {
+  0% {
+    background-color: #2e3d49;
+    color: #2e3d49;
+    transform: rotateY(180deg);
+  }
+  60% {
+    background-color: #2e3d49;
+    color: #2e3d49;
+  }
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #d4cec9;
+    font-size: 33px;
+    animation: flip 0.4s, push 0.6s;
+    animation-delay: 0s, 0.6s;
+}
+
+@keyframes push {
+    50% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin: 10px 0;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+/*Styles for Pop-Up message*/
+
+
+.popup-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.438);
+}
+
+.hide {
+    display: none;
+}
+
+.popup-body {
+    position: relative;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    transform: translate(-50%, -70%);
+}
+
+.popup-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid gray;
+}
+
+.popup-results {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 1px 0;
+}
+
+.popup-time {
+    margin: 5px;
+}
+
+.popup-stars {
+    margin: 5px;
+}
+
+.popup-moves {
+    margin: 5px;
+}
+
+.popup-close {
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.popup-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.popup-button {
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
