@@ -7,7 +7,7 @@ Starter code provided by Udacity to assist with HTML, CSS, Javascript shuffle fu
 
 # Table of Contents
 <ul>
-  <li><How to Play</li>
+  <li>How to Play</li>
   <li>Included in Repository and Script</li>
   <li>Launch Game</li>
 </ul>
