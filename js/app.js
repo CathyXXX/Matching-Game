@@ -4,12 +4,12 @@
 
 // Globals
 const deck = document.querySelector('.deck');
-let flipCards = [];
+let matched = 0;
 let moves = 0;
+let flipCards = [];
 let timerOff = true;
 let time = 0;
 let timerId;
-let matched = 0;
 
 //shuffle deck
 function shuffleDeck() {
