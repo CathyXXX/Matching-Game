@@ -73,13 +73,13 @@ function startTimer() {
 //displays this time we created by adding innerHTML to DOM
 function displayTime() {
     const timer = document.querySelector('.timer');
-    const min = Math.floor(time / 60);
-    const sec = time % 60;
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
 
-    if (sec < 10) {
-        timer.innerHTML = `${min}:0${sec}`;
+    if (seconds < 10) {
+        timer.innerHTML = `${minutes}:0${seconds}`;
     } else {
-        timer.innerHTML = `${min}:${sec}`;
+        timer.innerHTML = `${minutes}:${seconds}`;
     }
 }
 
