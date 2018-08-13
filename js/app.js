@@ -57,7 +57,7 @@ deck.addEventListener('click', event => {
 
 function isValid(clickedCard) {
     return (
-        clickedCard.classList.contains('card') && !clickedCard.classList.contains('match')
+        clickedCard.classList.contains('card') && !clickedCard.classList.contains('match') 
         && flipCards.length < 2 && !flipCards.includes(clickedCard)
     );
 }
