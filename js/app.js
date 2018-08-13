@@ -76,7 +76,7 @@ function displayTime() {
     const min = Math.floor(time / 60);
     const sec = time % 60;
 
-    if (seconds < 10) {
+    if (sec < 10) {
         timer.innerHTML = `${min}:0${sec}`;
     } else {
         timer.innerHTML = `${min}:${sec}`;
